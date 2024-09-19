@@ -70,7 +70,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(154, 434);
+            this.label9.Location = new System.Drawing.Point(25, 421);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 4;
@@ -79,7 +79,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(154, 408);
+            this.label8.Location = new System.Drawing.Point(25, 395);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 5;
@@ -88,7 +88,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(154, 381);
+            this.label7.Location = new System.Drawing.Point(25, 368);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 6;
@@ -97,7 +97,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(154, 346);
+            this.label6.Location = new System.Drawing.Point(25, 333);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 7;
@@ -106,7 +106,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(154, 315);
+            this.label5.Location = new System.Drawing.Point(25, 302);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 8;
@@ -115,7 +115,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(154, 287);
+            this.label4.Location = new System.Drawing.Point(25, 274);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 9;
@@ -124,7 +124,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(154, 264);
+            this.label3.Location = new System.Drawing.Point(25, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 10;
@@ -133,7 +133,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(154, 231);
+            this.label2.Location = new System.Drawing.Point(25, 218);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 11;
@@ -142,7 +142,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(154, 197);
+            this.label1.Location = new System.Drawing.Point(25, 184);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 12;
@@ -160,7 +160,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(94, 495);
+            this.textBox1.Location = new System.Drawing.Point(80, 488);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(485, 20);
             this.textBox1.TabIndex = 14;
@@ -170,8 +170,8 @@
             this.cmbRegType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRegType.FormattingEnabled = true;
             this.cmbRegType.Items.AddRange(new object[] {
-            "01 (0x01) Read Coils",
-            "02 (0x02) Read Discrete Inputs",
+            "01 (0x01) Read Coils (bit)",
+            "02 (0x02) Read Discrete Inputs (bit)",
             "03 (0x03) Read Holding Registers",
             "04 (0x04) Read Input Registers"});
             this.cmbRegType.Location = new System.Drawing.Point(19, 83);
@@ -275,7 +275,7 @@
             // 
             // txtTimeOut
             // 
-            this.txtTimeOut.Location = new System.Drawing.Point(479, 36);
+            this.txtTimeOut.Location = new System.Drawing.Point(419, 36);
             this.txtTimeOut.Name = "txtTimeOut";
             this.txtTimeOut.Size = new System.Drawing.Size(100, 20);
             this.txtTimeOut.TabIndex = 19;
@@ -284,7 +284,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(481, 20);
+            this.label16.Location = new System.Drawing.Point(421, 20);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(64, 13);
             this.label16.TabIndex = 13;
@@ -293,16 +293,16 @@
             // dgv
             // 
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(215, 165);
+            this.dgv.Location = new System.Drawing.Point(94, 167);
             this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(690, 302);
+            this.dgv.Size = new System.Drawing.Size(471, 302);
             this.dgv.TabIndex = 20;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(985, 545);
+            this.ClientSize = new System.Drawing.Size(597, 526);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.txtTimeOut);
             this.Controls.Add(this.txtUpdate);
