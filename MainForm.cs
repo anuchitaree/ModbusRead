@@ -84,7 +84,7 @@ namespace ModbusRead
                                     var model = new Readmodel()
                                     {
                                         Id = i + 1,
-                                        Address = (0 + i).ToString().PadLeft(6, '0').Insert(3, " "),
+                                        Address = (0 + i + startaddr).ToString().PadLeft(6, '0').Insert(3, " "),
                                         HexValue = null,
                                         DecValue = vals[i].ToString(),
                                     };
@@ -105,7 +105,7 @@ namespace ModbusRead
                                     var model = new Readmodel()
                                     {
                                         Id = i + 1,
-                                        Address = (200000 + i).ToString().PadLeft(6, '0').Insert(3, " "),
+                                        Address = (200000 + i + startaddr).ToString().PadLeft(6, '0').Insert(3, " "),
                                         HexValue = null,
                                         DecValue = vals[i].ToString(),
                                     };
@@ -124,7 +124,7 @@ namespace ModbusRead
                                     var model = new Readmodel()
                                     {
                                         Id = i + 1,
-                                        Address = (300000 + i).ToString().PadLeft(6, '0').Insert(3, " "),
+                                        Address = (300000 + i+ startaddr).ToString().PadLeft(6, '0').Insert(3, " "),
                                         HexValue = null,
                                         DecValue = vals[i].ToString(),
                                     };
@@ -144,7 +144,7 @@ namespace ModbusRead
                                     var model = new Readmodel()
                                     {
                                         Id = i + 1,
-                                        Address = (400000 + i).ToString().PadLeft(6, '0').Insert(3, " "),
+                                        Address = (400000 + i+ startaddr).ToString().PadLeft(6, '0').Insert(3, " "),
                                         DecValue = vals[i].ToString(),
                                     };
                                     readmodel.Add(model);
@@ -173,7 +173,10 @@ namespace ModbusRead
                         {
 
 
-                            var hexStr = int.Parse(item.DecValue, System.Globalization.NumberStyles.HexNumber).ToString();
+                            //var hexStr = int.Parse(item.DecValue, System.Globalization.NumberStyles.HexNumber).ToString();
+
+                            string hexStr = Convert.ToInt64(item.DecValue, 16).ToString();
+
                             row.Cells[3].Value = hexStr.PadLeft(4, '0');
 
                         }
@@ -202,7 +205,7 @@ namespace ModbusRead
 
         private void InitDvg()
         {
-            this.dgv.ColumnCount = 4;
+            this.dgv.ColumnCount = 6;
             this.dgv.Columns[0].Name = "No";
             this.dgv.Columns[0].Width = 30;
             this.dgv.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -215,6 +218,12 @@ namespace ModbusRead
             this.dgv.Columns[3].Name = "HEX";
             this.dgv.Columns[3].Width = 100;
             this.dgv.Columns[3].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.dgv.Columns[4].Name = "Int16";
+            this.dgv.Columns[4].Width = 100;
+            this.dgv.Columns[4].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.dgv.Columns[5].Name = "UInt32";
+            this.dgv.Columns[5].Width = 100;
+            this.dgv.Columns[5].SortMode = DataGridViewColumnSortMode.NotSortable;
             this.dgv.RowHeadersWidth = 30;
             this.dgv.DefaultCellStyle.Font = new Font("Tahoma", 10);
             this.dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 10);
