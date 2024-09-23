@@ -175,8 +175,10 @@ namespace ModbusRead
 
                             //var hexStr = int.Parse(item.DecValue, System.Globalization.NumberStyles.HexNumber).ToString();
 
-                            string hexStr = Convert.ToInt64(item.DecValue, 16).ToString();
-
+                            //string hexStr = Convert.ToInt64(item.DecValue, 16).ToString();
+                            int hexstr = int.Parse(item.DecValue);
+                            string hexStr = hexstr.ToString("X");
+    
                             row.Cells[3].Value = hexStr.PadLeft(4, '0');
 
                         }
@@ -210,16 +212,16 @@ namespace ModbusRead
             this.dgv.Columns[0].Width = 30;
             this.dgv.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
             this.dgv.Columns[1].Name = "Address";
-            this.dgv.Columns[1].Width = 100;
+            this.dgv.Columns[1].Width = 80;
             this.dgv.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
             this.dgv.Columns[2].Name = "DEC";
-            this.dgv.Columns[2].Width = 100;
+            this.dgv.Columns[2].Width = 80;
             this.dgv.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
             this.dgv.Columns[3].Name = "HEX";
-            this.dgv.Columns[3].Width = 100;
+            this.dgv.Columns[3].Width = 80;
             this.dgv.Columns[3].SortMode = DataGridViewColumnSortMode.NotSortable;
             this.dgv.Columns[4].Name = "Int16";
-            this.dgv.Columns[4].Width = 100;
+            this.dgv.Columns[4].Width = 80;
             this.dgv.Columns[4].SortMode = DataGridViewColumnSortMode.NotSortable;
             this.dgv.Columns[5].Name = "UInt32";
             this.dgv.Columns[5].Width = 100;
