@@ -81,9 +81,9 @@
             this.btnConnect.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConnect.Location = new System.Drawing.Point(408, 3);
+            this.btnConnect.Location = new System.Drawing.Point(407, 3);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(112, 41);
+            this.btnConnect.Size = new System.Drawing.Size(113, 41);
             this.btnConnect.TabIndex = 3;
             this.btnConnect.Text = "CONNECT";
             this.btnConnect.UseVisualStyleBackColor = true;
@@ -101,7 +101,7 @@
             "04 (0x04) Read Input Registers"});
             this.cmbRegType.Location = new System.Drawing.Point(0, 20);
             this.cmbRegType.Name = "cmbRegType";
-            this.cmbRegType.Size = new System.Drawing.Size(223, 21);
+            this.cmbRegType.Size = new System.Drawing.Size(222, 21);
             this.cmbRegType.TabIndex = 15;
             // 
             // txtPort
@@ -118,7 +118,7 @@
             this.txtAddrIp.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtAddrIp.Location = new System.Drawing.Point(0, 21);
             this.txtAddrIp.Name = "txtAddrIp";
-            this.txtAddrIp.Size = new System.Drawing.Size(223, 20);
+            this.txtAddrIp.Size = new System.Drawing.Size(222, 20);
             this.txtAddrIp.TabIndex = 17;
             this.txtAddrIp.Text = "127.0.0.1";
             // 
@@ -156,7 +156,7 @@
             this.txtStartAddr.Name = "txtStartAddr";
             this.txtStartAddr.Size = new System.Drawing.Size(94, 20);
             this.txtStartAddr.TabIndex = 19;
-            this.txtStartAddr.Text = "1";
+            this.txtStartAddr.Text = "0";
             // 
             // txtQty
             // 
@@ -190,7 +190,7 @@
             this.txtUpdate.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtUpdate.Location = new System.Drawing.Point(0, 21);
             this.txtUpdate.Name = "txtUpdate";
-            this.txtUpdate.Size = new System.Drawing.Size(112, 20);
+            this.txtUpdate.Size = new System.Drawing.Size(113, 20);
             this.txtUpdate.TabIndex = 19;
             this.txtUpdate.Text = "1";
             // 
@@ -263,7 +263,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.txtPort);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Location = new System.Drawing.Point(232, 3);
+            this.panel1.Location = new System.Drawing.Point(231, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(94, 41);
             this.panel1.TabIndex = 23;
@@ -277,7 +277,7 @@
             this.panel2.Controls.Add(this.label10);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(223, 41);
+            this.panel2.Size = new System.Drawing.Size(222, 41);
             this.panel2.TabIndex = 23;
             // 
             // panel3
@@ -287,7 +287,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.txtTimeOut);
             this.panel3.Controls.Add(this.label16);
-            this.panel3.Location = new System.Drawing.Point(332, 3);
+            this.panel3.Location = new System.Drawing.Point(331, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(70, 41);
             this.panel3.TabIndex = 23;
@@ -299,7 +299,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.Controls.Add(this.txtQty);
             this.panel5.Controls.Add(this.label14);
-            this.panel5.Location = new System.Drawing.Point(332, 50);
+            this.panel5.Location = new System.Drawing.Point(331, 50);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(70, 41);
             this.panel5.TabIndex = 23;
@@ -311,9 +311,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.Controls.Add(this.txtUpdate);
             this.panel6.Controls.Add(this.label15);
-            this.panel6.Location = new System.Drawing.Point(408, 50);
+            this.panel6.Location = new System.Drawing.Point(407, 50);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(112, 41);
+            this.panel6.Size = new System.Drawing.Size(113, 41);
             this.panel6.TabIndex = 23;
             // 
             // panel7
@@ -323,7 +323,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.Controls.Add(this.txtStartAddr);
             this.panel7.Controls.Add(this.label13);
-            this.panel7.Location = new System.Drawing.Point(232, 50);
+            this.panel7.Location = new System.Drawing.Point(231, 50);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(94, 41);
             this.panel7.TabIndex = 23;
@@ -337,7 +337,7 @@
             this.panel8.Controls.Add(this.label12);
             this.panel8.Location = new System.Drawing.Point(3, 50);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(223, 41);
+            this.panel8.Size = new System.Drawing.Size(222, 41);
             this.panel8.TabIndex = 23;
             // 
             // tableLayoutPanel2
@@ -364,7 +364,7 @@
             this.ClientSize = new System.Drawing.Size(529, 406);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "MainForm";
-            this.Text = "Modbus TCP Read";
+            this.Text = "Modbus TCP Read by Anuchit.A";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);

@@ -36,6 +36,8 @@ namespace ModbusRead
                     timerPoll.Tick += timerPoll_Tick;
                     timerPoll.Start();
                     btnConnect.Text = "CONNECTED";
+                    btnConnect.BackColor = Color.GreenYellow;
+
                     lbStatus.Text = "";
                 }
                 else
@@ -63,7 +65,9 @@ namespace ModbusRead
         {
             try
             {
-
+                //if (modbusClient.Available(0) != true) {
+                //    Console.WriteLine();
+                //};
 
                 if (modbusClient.Connected == true)
                 {
@@ -191,11 +195,23 @@ namespace ModbusRead
 
 
                 }
+                else 
+                {
+                    modbusClient.Disconnect();
+                    btnConnect.Text = "CONNECT";
+                    btnConnect.BackColor = SystemColors.Control;
+                    timerPoll.Tick -= timerPoll_Tick;
+                }
 
             }
             catch (Exception ex)
             {
                 ex.ToString();
+
+                modbusClient.Disconnect();
+                btnConnect.Text = "CONNECT";
+                btnConnect.BackColor = SystemColors.Control;
+                timerPoll.Tick -= timerPoll_Tick;
             }
         }
 
