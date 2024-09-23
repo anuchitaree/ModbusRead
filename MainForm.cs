@@ -44,6 +44,7 @@ namespace ModbusRead
                 {
                     modbusClient.Disconnect();
                     btnConnect.Text = "CONNECT";
+                    btnConnect.BackColor = SystemColors.Control;
                     timerPoll.Tick -= timerPoll_Tick;
                 }
             }
