@@ -37,7 +37,7 @@ namespace ModbusRead
                     timerPoll.Start();
                     btnConnect.Text = "CONNECTED";
                     btnConnect.BackColor = Color.GreenYellow;
-
+                    cmbRegType.Enabled = true;
                     lbStatus.Text = "";
                 }
                 else
@@ -46,6 +46,8 @@ namespace ModbusRead
                     btnConnect.Text = "CONNECT";
                     btnConnect.BackColor = SystemColors.Control;
                     timerPoll.Tick -= timerPoll_Tick;
+                    cmbRegType.Enabled = false;
+
                 }
             }
             catch (EasyModbus.Exceptions.ConnectionException ex)
@@ -110,7 +112,7 @@ namespace ModbusRead
                                     var model = new Readmodel()
                                     {
                                         Id = i + 1,
-                                        Address = (200000 + i + startaddr).ToString().PadLeft(6, '0').Insert(3, " "),
+                                        Address = (100000 + i + startaddr).ToString().PadLeft(6, '0').Insert(3, " "),
                                         HexValue = null,
                                         DecValue = vals[i].ToString(),
                                     };
@@ -123,7 +125,7 @@ namespace ModbusRead
                         case 2:
                             if (true)
                             {
-                                int[] vals = modbusClient.ReadHoldingRegisters(startaddr, qty);
+                                int[] vals = modbusClient.ReadInputRegisters(startaddr, qty);
                                 for (int i = 0; i < qty; i++)
                                 {
                                     var model = new Readmodel()
@@ -143,7 +145,7 @@ namespace ModbusRead
                         case 3:
                             if (true)
                             {
-                                int[] vals = modbusClient.ReadInputRegisters(startaddr, qty);
+                                int[] vals = modbusClient.ReadHoldingRegisters(startaddr, qty);
                                 for (int i = 0; i < qty; i++)
                                 {
                                     var model = new Readmodel()
@@ -167,9 +169,9 @@ namespace ModbusRead
                     {
                         DataGridViewRow row = new DataGridViewRow();
                         row.CreateCells(dgv);
-                        row.Cells[0].Value = item.Id;
-                        row.Cells[1].Value = item.Address;
-                        row.Cells[2].Value = item.DecValue;
+                        //row.Cells[0].Value = item.Id;
+                        row.Cells[0].Value = item.Address;
+                        row.Cells[1].Value = item.DecValue;
                         if (item.DecValue == "True" || item.DecValue == "False")
                         {
 
@@ -183,7 +185,9 @@ namespace ModbusRead
                             //string hexStr = Convert.ToInt64(item.DecValue, 16).ToString();
                             int hexstr = int.Parse(item.DecValue);
                             string hexStr = hexstr.ToString("X");
-    
+                            if (hexStr.Length == 8)
+                                hexStr = hexStr.Substring(4, 4);
+
                             row.Cells[3].Value = hexStr.PadLeft(4, '0');
 
                         }
@@ -213,36 +217,40 @@ namespace ModbusRead
                 btnConnect.Text = "CONNECT";
                 btnConnect.BackColor = SystemColors.Control;
                 timerPoll.Tick -= timerPoll_Tick;
+                cmbRegType.Enabled = false;
+
             }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             cmbRegType.SelectedIndex = 0;
+            cmbRegType.Enabled = false;
+
             InitDvg();
         }
 
         private void InitDvg()
         {
-            this.dgv.ColumnCount = 6;
-            this.dgv.Columns[0].Name = "No";
-            this.dgv.Columns[0].Width = 30;
+            this.dgv.ColumnCount = 5;
+            //this.dgv.Columns[0].Name = "No";
+            //this.dgv.Columns[0].Width = 30;
+            //this.dgv.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.dgv.Columns[0].Name = "Address";
+            this.dgv.Columns[0].Width = 80;
             this.dgv.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
-            this.dgv.Columns[1].Name = "Address";
+            this.dgv.Columns[1].Name = "DEC";
             this.dgv.Columns[1].Width = 80;
             this.dgv.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
-            this.dgv.Columns[2].Name = "DEC";
+            this.dgv.Columns[2].Name = "HEX";
             this.dgv.Columns[2].Width = 80;
-            this.dgv.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
-            this.dgv.Columns[3].Name = "HEX";
+            this.dgv.Columns[3].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.dgv.Columns[3].Name = "Int16";
             this.dgv.Columns[3].Width = 80;
             this.dgv.Columns[3].SortMode = DataGridViewColumnSortMode.NotSortable;
-            this.dgv.Columns[4].Name = "Int16";
-            this.dgv.Columns[4].Width = 80;
+            this.dgv.Columns[4].Name = "UInt32";
+            this.dgv.Columns[4].Width = 100;
             this.dgv.Columns[4].SortMode = DataGridViewColumnSortMode.NotSortable;
-            this.dgv.Columns[5].Name = "UInt32";
-            this.dgv.Columns[5].Width = 100;
-            this.dgv.Columns[5].SortMode = DataGridViewColumnSortMode.NotSortable;
             this.dgv.RowHeadersWidth = 30;
             this.dgv.DefaultCellStyle.Font = new Font("Tahoma", 10);
             this.dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 10);

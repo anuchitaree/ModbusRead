@@ -70,9 +70,9 @@
             // 
             this.lbStatus.AutoSize = true;
             this.lbStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbStatus.Location = new System.Drawing.Point(3, 386);
+            this.lbStatus.Location = new System.Drawing.Point(3, 372);
             this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(523, 20);
+            this.lbStatus.Size = new System.Drawing.Size(441, 20);
             this.lbStatus.TabIndex = 13;
             this.lbStatus.Text = "status:";
             // 
@@ -81,9 +81,9 @@
             this.btnConnect.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConnect.Location = new System.Drawing.Point(407, 3);
+            this.btnConnect.Location = new System.Drawing.Point(343, 3);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(113, 41);
+            this.btnConnect.Size = new System.Drawing.Size(95, 41);
             this.btnConnect.TabIndex = 3;
             this.btnConnect.Text = "CONNECT";
             this.btnConnect.UseVisualStyleBackColor = true;
@@ -95,13 +95,13 @@
             this.cmbRegType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRegType.FormattingEnabled = true;
             this.cmbRegType.Items.AddRange(new object[] {
-            "01 (0x01) Read Coils (bit)",
-            "02 (0x02) Read Discrete Inputs (bit)",
-            "03 (0x03) Read Holding Registers",
-            "04 (0x04) Read Input Registers"});
+            "01 Coils                          0nnnn",
+            "02 Discrete Inputs        1nnnn",
+            "04 Input Registers        3nnnn",
+            "03 Holding Registers  4nnnn"});
             this.cmbRegType.Location = new System.Drawing.Point(0, 20);
             this.cmbRegType.Name = "cmbRegType";
-            this.cmbRegType.Size = new System.Drawing.Size(222, 21);
+            this.cmbRegType.Size = new System.Drawing.Size(189, 21);
             this.cmbRegType.TabIndex = 15;
             // 
             // txtPort
@@ -109,7 +109,7 @@
             this.txtPort.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtPort.Location = new System.Drawing.Point(0, 21);
             this.txtPort.Name = "txtPort";
-            this.txtPort.Size = new System.Drawing.Size(94, 20);
+            this.txtPort.Size = new System.Drawing.Size(74, 20);
             this.txtPort.TabIndex = 16;
             this.txtPort.Text = "502";
             // 
@@ -118,7 +118,7 @@
             this.txtAddrIp.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtAddrIp.Location = new System.Drawing.Point(0, 21);
             this.txtAddrIp.Name = "txtAddrIp";
-            this.txtAddrIp.Size = new System.Drawing.Size(222, 20);
+            this.txtAddrIp.Size = new System.Drawing.Size(189, 20);
             this.txtAddrIp.TabIndex = 17;
             this.txtAddrIp.Text = "127.0.0.1";
             // 
@@ -154,7 +154,7 @@
             this.txtStartAddr.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtStartAddr.Location = new System.Drawing.Point(0, 21);
             this.txtStartAddr.Name = "txtStartAddr";
-            this.txtStartAddr.Size = new System.Drawing.Size(94, 20);
+            this.txtStartAddr.Size = new System.Drawing.Size(74, 20);
             this.txtStartAddr.TabIndex = 19;
             this.txtStartAddr.Text = "0";
             // 
@@ -163,7 +163,7 @@
             this.txtQty.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtQty.Location = new System.Drawing.Point(0, 21);
             this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(70, 20);
+            this.txtQty.Size = new System.Drawing.Size(59, 20);
             this.txtQty.TabIndex = 19;
             this.txtQty.Text = "10";
             // 
@@ -190,7 +190,7 @@
             this.txtUpdate.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtUpdate.Location = new System.Drawing.Point(0, 21);
             this.txtUpdate.Name = "txtUpdate";
-            this.txtUpdate.Size = new System.Drawing.Size(113, 20);
+            this.txtUpdate.Size = new System.Drawing.Size(95, 20);
             this.txtUpdate.TabIndex = 19;
             this.txtUpdate.Text = "1";
             // 
@@ -208,7 +208,7 @@
             this.txtTimeOut.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtTimeOut.Location = new System.Drawing.Point(0, 21);
             this.txtTimeOut.Name = "txtTimeOut";
-            this.txtTimeOut.Size = new System.Drawing.Size(70, 20);
+            this.txtTimeOut.Size = new System.Drawing.Size(59, 20);
             this.txtTimeOut.TabIndex = 19;
             this.txtTimeOut.Text = "5000";
             // 
@@ -229,16 +229,16 @@
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.Location = new System.Drawing.Point(3, 103);
             this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(523, 280);
+            this.dgv.Size = new System.Drawing.Size(441, 266);
             this.dgv.TabIndex = 20;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 2, 0);
@@ -253,7 +253,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(523, 94);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(441, 94);
             this.tableLayoutPanel1.TabIndex = 22;
             // 
             // panel1
@@ -263,9 +263,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.txtPort);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Location = new System.Drawing.Point(231, 3);
+            this.panel1.Location = new System.Drawing.Point(198, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(94, 41);
+            this.panel1.Size = new System.Drawing.Size(74, 41);
             this.panel1.TabIndex = 23;
             // 
             // panel2
@@ -277,7 +277,7 @@
             this.panel2.Controls.Add(this.label10);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(222, 41);
+            this.panel2.Size = new System.Drawing.Size(189, 41);
             this.panel2.TabIndex = 23;
             // 
             // panel3
@@ -287,9 +287,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.txtTimeOut);
             this.panel3.Controls.Add(this.label16);
-            this.panel3.Location = new System.Drawing.Point(331, 3);
+            this.panel3.Location = new System.Drawing.Point(278, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(70, 41);
+            this.panel3.Size = new System.Drawing.Size(59, 41);
             this.panel3.TabIndex = 23;
             // 
             // panel5
@@ -299,9 +299,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.Controls.Add(this.txtQty);
             this.panel5.Controls.Add(this.label14);
-            this.panel5.Location = new System.Drawing.Point(331, 50);
+            this.panel5.Location = new System.Drawing.Point(278, 50);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(70, 41);
+            this.panel5.Size = new System.Drawing.Size(59, 41);
             this.panel5.TabIndex = 23;
             // 
             // panel6
@@ -311,9 +311,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.Controls.Add(this.txtUpdate);
             this.panel6.Controls.Add(this.label15);
-            this.panel6.Location = new System.Drawing.Point(407, 50);
+            this.panel6.Location = new System.Drawing.Point(343, 50);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(113, 41);
+            this.panel6.Size = new System.Drawing.Size(95, 41);
             this.panel6.TabIndex = 23;
             // 
             // panel7
@@ -323,9 +323,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.Controls.Add(this.txtStartAddr);
             this.panel7.Controls.Add(this.label13);
-            this.panel7.Location = new System.Drawing.Point(231, 50);
+            this.panel7.Location = new System.Drawing.Point(198, 50);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(94, 41);
+            this.panel7.Size = new System.Drawing.Size(74, 41);
             this.panel7.TabIndex = 23;
             // 
             // panel8
@@ -337,7 +337,7 @@
             this.panel8.Controls.Add(this.label12);
             this.panel8.Location = new System.Drawing.Point(3, 50);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(222, 41);
+            this.panel8.Size = new System.Drawing.Size(189, 41);
             this.panel8.TabIndex = 23;
             // 
             // tableLayoutPanel2
@@ -354,14 +354,14 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(529, 406);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(447, 392);
             this.tableLayoutPanel2.TabIndex = 23;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 406);
+            this.ClientSize = new System.Drawing.Size(447, 392);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "MainForm";
             this.Text = "Modbus TCP Read by Anuchit.A";
