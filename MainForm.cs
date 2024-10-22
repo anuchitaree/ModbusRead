@@ -68,10 +68,6 @@ namespace ModbusRead
         {
             try
             {
-                //if (modbusClient.Available(0) != true) {
-                //    Console.WriteLine();
-                //};
-
                 if (modbusClient.Connected == true)
                 {
                     int startaddr = int.Parse(txtStartAddr.Text);
@@ -228,14 +224,17 @@ namespace ModbusRead
             cmbRegType.Enabled = false;
 
             InitDvg();
+            for (int i = 0; i < 31; i++)
+            {
+                cmbIdentify.Items.Add(i + 1);
+            }
+            cmbIdentify.SelectedIndex = 0;
         }
 
         private void InitDvg()
         {
             this.dgv.ColumnCount = 5;
-            //this.dgv.Columns[0].Name = "No";
-            //this.dgv.Columns[0].Width = 30;
-            //this.dgv.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
+           
             this.dgv.Columns[0].Name = "Address";
             this.dgv.Columns[0].Width = 80;
             this.dgv.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;

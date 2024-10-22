@@ -54,6 +54,9 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbIdentify = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -64,6 +67,7 @@
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbStatus
@@ -101,7 +105,7 @@
             "03 Holding Registers  4nnnn"});
             this.cmbRegType.Location = new System.Drawing.Point(0, 20);
             this.cmbRegType.Name = "cmbRegType";
-            this.cmbRegType.Size = new System.Drawing.Size(189, 21);
+            this.cmbRegType.Size = new System.Drawing.Size(144, 21);
             this.cmbRegType.TabIndex = 15;
             // 
             // txtPort
@@ -118,7 +122,7 @@
             this.txtAddrIp.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtAddrIp.Location = new System.Drawing.Point(0, 21);
             this.txtAddrIp.Name = "txtAddrIp";
-            this.txtAddrIp.Size = new System.Drawing.Size(189, 20);
+            this.txtAddrIp.Size = new System.Drawing.Size(144, 20);
             this.txtAddrIp.TabIndex = 17;
             this.txtAddrIp.Text = "127.0.0.1";
             // 
@@ -163,7 +167,7 @@
             this.txtQty.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtQty.Location = new System.Drawing.Point(0, 21);
             this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(59, 20);
+            this.txtQty.Size = new System.Drawing.Size(44, 20);
             this.txtQty.TabIndex = 19;
             this.txtQty.Text = "10";
             // 
@@ -208,7 +212,7 @@
             this.txtTimeOut.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtTimeOut.Location = new System.Drawing.Point(0, 21);
             this.txtTimeOut.Name = "txtTimeOut";
-            this.txtTimeOut.Size = new System.Drawing.Size(59, 20);
+            this.txtTimeOut.Size = new System.Drawing.Size(44, 20);
             this.txtTimeOut.TabIndex = 19;
             this.txtTimeOut.Text = "5000";
             // 
@@ -234,19 +238,21 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnCount = 5;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel5, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel6, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel7, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel8, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnConnect, 3, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel3, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel5, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel6, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel7, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel8, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnConnect, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -263,7 +269,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.txtPort);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Location = new System.Drawing.Point(198, 3);
+            this.panel1.Location = new System.Drawing.Point(213, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(74, 41);
             this.panel1.TabIndex = 23;
@@ -275,9 +281,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.txtAddrIp);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Location = new System.Drawing.Point(63, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(189, 41);
+            this.panel2.Size = new System.Drawing.Size(144, 41);
             this.panel2.TabIndex = 23;
             // 
             // panel3
@@ -287,9 +293,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.txtTimeOut);
             this.panel3.Controls.Add(this.label16);
-            this.panel3.Location = new System.Drawing.Point(278, 3);
+            this.panel3.Location = new System.Drawing.Point(293, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(59, 41);
+            this.panel3.Size = new System.Drawing.Size(44, 41);
             this.panel3.TabIndex = 23;
             // 
             // panel5
@@ -299,9 +305,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.Controls.Add(this.txtQty);
             this.panel5.Controls.Add(this.label14);
-            this.panel5.Location = new System.Drawing.Point(278, 50);
+            this.panel5.Location = new System.Drawing.Point(293, 50);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(59, 41);
+            this.panel5.Size = new System.Drawing.Size(44, 41);
             this.panel5.TabIndex = 23;
             // 
             // panel6
@@ -323,7 +329,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.Controls.Add(this.txtStartAddr);
             this.panel7.Controls.Add(this.label13);
-            this.panel7.Location = new System.Drawing.Point(198, 50);
+            this.panel7.Location = new System.Drawing.Point(213, 50);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(74, 41);
             this.panel7.TabIndex = 23;
@@ -335,9 +341,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.Controls.Add(this.cmbRegType);
             this.panel8.Controls.Add(this.label12);
-            this.panel8.Location = new System.Drawing.Point(3, 50);
+            this.panel8.Location = new System.Drawing.Point(63, 50);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(189, 41);
+            this.panel8.Size = new System.Drawing.Size(144, 41);
             this.panel8.TabIndex = 23;
             // 
             // tableLayoutPanel2
@@ -356,6 +362,33 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(447, 392);
             this.tableLayoutPanel2.TabIndex = 23;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.cmbIdentify);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(54, 41);
+            this.panel4.TabIndex = 24;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Identify";
+            // 
+            // cmbIdentify
+            // 
+            this.cmbIdentify.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdentify.FormattingEnabled = true;
+            this.cmbIdentify.Location = new System.Drawing.Point(4, 18);
+            this.cmbIdentify.Name = "cmbIdentify";
+            this.cmbIdentify.Size = new System.Drawing.Size(47, 21);
+            this.cmbIdentify.TabIndex = 1;
             // 
             // MainForm
             // 
@@ -384,6 +417,8 @@
             this.panel8.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -416,6 +451,9 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ComboBox cmbIdentify;
+        private System.Windows.Forms.Label label1;
     }
 }
 
