@@ -53,10 +53,10 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.cmbIdentify = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -66,15 +66,15 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbStatus
             // 
             this.lbStatus.AutoSize = true;
             this.lbStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbStatus.Location = new System.Drawing.Point(3, 372);
+            this.lbStatus.Location = new System.Drawing.Point(3, 581);
             this.lbStatus.Name = "lbStatus";
             this.lbStatus.Size = new System.Drawing.Size(441, 20);
             this.lbStatus.TabIndex = 13;
@@ -99,10 +99,10 @@
             this.cmbRegType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRegType.FormattingEnabled = true;
             this.cmbRegType.Items.AddRange(new object[] {
-            "01 Coils                          0nnnn",
-            "02 Discrete Inputs        1nnnn",
-            "04 Input Registers        3nnnn",
-            "03 Holding Registers  4nnnn"});
+            "01 Coils                0nnnn",
+            "02 Discrete Inputs 1nnnn",
+            "04 Input Reg      3nnnn",
+            "03 Holding Reg  4nnnn"});
             this.cmbRegType.Location = new System.Drawing.Point(0, 20);
             this.cmbRegType.Name = "cmbRegType";
             this.cmbRegType.Size = new System.Drawing.Size(144, 21);
@@ -169,7 +169,7 @@
             this.txtQty.Name = "txtQty";
             this.txtQty.Size = new System.Drawing.Size(44, 20);
             this.txtQty.TabIndex = 19;
-            this.txtQty.Text = "10";
+            this.txtQty.Text = "20";
             // 
             // label13
             // 
@@ -233,7 +233,7 @@
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.Location = new System.Drawing.Point(3, 103);
             this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(441, 266);
+            this.dgv.Size = new System.Drawing.Size(441, 475);
             this.dgv.TabIndex = 20;
             // 
             // tableLayoutPanel1
@@ -346,6 +346,34 @@
             this.panel8.Size = new System.Drawing.Size(144, 41);
             this.panel8.TabIndex = 23;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.cmbIdentify);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(54, 41);
+            this.panel4.TabIndex = 24;
+            // 
+            // cmbIdentify
+            // 
+            this.cmbIdentify.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdentify.FormattingEnabled = true;
+            this.cmbIdentify.Location = new System.Drawing.Point(4, 18);
+            this.cmbIdentify.Name = "cmbIdentify";
+            this.cmbIdentify.Size = new System.Drawing.Size(47, 21);
+            this.cmbIdentify.TabIndex = 1;
+            this.cmbIdentify.SelectedIndexChanged += new System.EventHandler(this.cmbIdentify_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Identify";
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
@@ -360,42 +388,16 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(447, 392);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(447, 601);
             this.tableLayoutPanel2.TabIndex = 23;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.cmbIdentify);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(3, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(54, 41);
-            this.panel4.TabIndex = 24;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Identify";
-            // 
-            // cmbIdentify
-            // 
-            this.cmbIdentify.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbIdentify.FormattingEnabled = true;
-            this.cmbIdentify.Location = new System.Drawing.Point(4, 18);
-            this.cmbIdentify.Name = "cmbIdentify";
-            this.cmbIdentify.Size = new System.Drawing.Size(47, 21);
-            this.cmbIdentify.TabIndex = 1;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 392);
+            this.ClientSize = new System.Drawing.Size(447, 601);
             this.Controls.Add(this.tableLayoutPanel2);
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Modbus TCP Read by Anuchit.A";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -415,10 +417,10 @@
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
