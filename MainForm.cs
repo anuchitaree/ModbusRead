@@ -282,7 +282,7 @@ namespace ModbusRead
             this.dgv.Columns[2].Width = 80;
             this.dgv.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             this.dgv.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            this.dgv.Columns[3].Name = "UInt32";
+            this.dgv.Columns[3].Name = "Int32";
             this.dgv.Columns[3].Width = 100;
             this.dgv.Columns[3].SortMode = DataGridViewColumnSortMode.NotSortable;
             this.dgv.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
